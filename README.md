@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 For this project you need to install the following applications:
 ```
 sudo apt-get update
-sudo apt-get install curl
+sudo apt-get install curl sshpass
 ```
 As runtime environment you need python in version 2.7. On the most linux desktop versions python is already installed. If not read the documentation of your liunx version how to install python.
 
@@ -98,8 +98,19 @@ A python script to access the database and to communicate with the webpage via a
 
 ## History
 
-2014 Start of development and private Usage
-2016 first public release
+* **2016.10.22**
+first public release with minor cod changes for the public release
+* **2015.05.19**
+private revision 1.3: add webserver, change database schema, bugfixes
+* **2014.11.10**
+private revision 1.2: add webfrontend, code rework and bugfixes
+* **2014.04.15**
+private revision 1.1: receive sprachbox voicemail and send this with mail notification
+* **2014.04.08**
+private revision 1.0: simple mail notification
+* **2014.02.20**
+Start of development and private Usage
+
 
 ## Authors
 
