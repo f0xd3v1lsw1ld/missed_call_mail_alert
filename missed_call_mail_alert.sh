@@ -23,5 +23,8 @@ cd $INSTALL_PATH
 
 rm -f out.file
 
+if [ ! -d logs ]; then
+ mkdir logs
+fi
 
 ./pingscript.sh $SPEEDPORT_IP >logs/pingstat.log
