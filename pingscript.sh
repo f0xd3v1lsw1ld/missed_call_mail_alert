@@ -3,7 +3,7 @@
 # -q quiet
 # -c nb of pings to perform
 
-if [ ! $1]; then
+if [ ! $1 ]; then
 echo "ERROR: Missing server ip"
 echo "usage: ./pingscript.sh <IP>"
 exit
