@@ -37,6 +37,19 @@ The process of installing depends on the machine, where you will do this. This c
       - to =  a comma separated list of e-mail addresses who should receive the notification
    - **missed_call_mail_alert.sh**
      This is the main script. Here you should define the IP address of your speedport and the login username and password (hashed) for the website of your speedport
+   - **Warning**
+     After you store your login inside both files, don't commit them to the repsitory.
+     For better security you can config git to ignore updates to this files
+     ```
+     git update-index --assume-unchanged missed_call_mail_alert.sh
+     git update-index --assume-unchanged mailbox.ini
+     ```
+     To reset this, please use:
+     ```
+     git update-index --no-assume-unchanged missed_call_mail_alert.sh
+     git update-index --no-assume-unchanged mailbox.ini
+     ```
+     **But don't forget to remove your login data, before you commit changes from these files.**
 3. [HOST] Deployment
    If you start on your desktop you must deploy your project to your raspberry pi. For this step a working ssh account to your raspberry pi is necessary. Otherwise you can use ftp to copy all files to your rpi.
    For the deployment I prepared a script which you should run. As arguments the scripts requires your ssh login and the raspberry pi IP address. Otherwise you can define this inside the script.
