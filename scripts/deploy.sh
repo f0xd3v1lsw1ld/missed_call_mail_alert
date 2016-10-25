@@ -14,5 +14,4 @@ echo "   server IP: "$PI_IP
 echo "   username: "$USER
 echo "   password: "$PASSWORD
 
-rsync -av --exclude *.db ../ $USER@$PI_IP:/home/$USER/missed_call_mail_alert && sshpass -p "$PASSWORD" ssh $USER@$PI_IP "cd /home/$USER/missed_call_mail_alert/scripts && sudo ./after_deploy.sh"
-"
+sshpass -p $PASSWORD rsync -av --exclude *.db --exclude ".*" --exclude "./*" ../ $USER@$PI_IP:/home/$USER/missed_call_mail_alert && sshpass -p $PASSWORD ssh $USER@$PI_IP "cd /home/$USER/missed_call_mail_alert/scripts && ./after_deploy.sh $USER"
