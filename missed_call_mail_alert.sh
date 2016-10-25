@@ -1,10 +1,12 @@
 #! /bin/sh
 
 USERNAME="username"
-PASSWORD="password
-SPEEDPORT_IP=192.168.2.1
-"
-cd ~/calllist
+PASSWORD="password"
+SPEEDPORT_IP="192.168.2.1"
+
+INSTALL_PATH="/home/pi/missed_call_mail_alert"
+
+cd $INSTAL_PATH
 
 #login into speedport
 /usr/bin/curl -c cookies.txt -d "Username=$USERNAME&Password=$PASSWORD=" --user-agent "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0" -k https://speedport.ip/index/login.cgi
