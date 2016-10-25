@@ -10,7 +10,7 @@ cd $INSTALL_PATH
 
 
 #login into speedport
-/usr/bin/curl -c cookies.txt -d "Username=$USERNAME&Password=$PASSWORD=" --user-agent "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0" -k https://speedport.ip/index/login.cgi
+/usr/bin/curl -c cookies.txt -d "Username=$USERNAME&Password=$PASSWORD" --user-agent "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0" -k https://speedport.ip/index/login.cgi
 
 #receive the calllist and parse them with python
 /usr/bin/curl -b cookies.txt --user-agent "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0" -k https://speedport.ip/auth/hcti_status_telanrl.php? | grep "new Array"|cut -c 30-|sed "s'\/''g"|sed "s/(//g"|sed "s/)//g"|sed "s/;//g"|sed "s/\"//g" > out.file
