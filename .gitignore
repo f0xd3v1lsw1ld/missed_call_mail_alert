@@ -96,3 +96,4 @@ logs/
 # for higher security ignore config file and main script, because these contain the mail login
 *.ini
 missed_call_mail_alert.sh
+mailbox.ini
